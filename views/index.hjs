@@ -5,8 +5,6 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>{{ title }}</h1>
-    <p id='subtitle'>Welcome to {{ title }}</p>
 
     <span class='chat' id='chat_app'>
       <form id='send_message'>
