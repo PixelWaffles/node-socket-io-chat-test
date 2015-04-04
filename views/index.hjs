@@ -7,6 +7,14 @@
   <body>
     <h1>{{ title }}</h1>
     <p id='subtitle'>Welcome to {{ title }}</p>
+
+    <span class='chat' id='chat_app'>
+      <form id='send_message'>
+        <input size='35' id='message_box' />
+        <input type='submit' />
+      </form>
+    </span>
+
     <script src='http://code.jquery.com/jquery-latest.min.js'></script> 
     <script src='/socket.io/socket.io.js'></script>
     <script src='/javascripts/chat.js'></script>
