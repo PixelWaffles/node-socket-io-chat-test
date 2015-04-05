@@ -9,7 +9,8 @@
     <span class='chat' id='chat-app'>
       <div class='chat-display' id='message-display'></div>
       <form id='send-message'>
-        <input size='35' id='message-box' />
+        <input size='16' id='username-box' placeholder='username' />
+        <input size='35' id='message-box' placeholder='message' />
         <input type='submit' />
       </form>
     </span>

@@ -5,13 +5,20 @@
 $(document).ready(function($) {
 
   var $messageForm = $('#send-message')
+    , $usernameBox = $('#username-box')
     , $messageBox = $('#message-box')
     , $messageDisplay = $('#message-display')
     ;
 
   $messageForm.submit(function(_event) {
     _event.preventDefault();
-    socket.emit('send_message', $messageBox.val());
+
+    if( $usernameBox.val() === '') {
+      socket.emit('send_message', '<b>' + 'anonymous' + ': ' + '</b>' + $messageBox.val());
+    } else {
+      socket.emit('send_message', '<b>' + $usernameBox.val() + ': ' + '</b>' + $messageBox.val());
+    }
+    
     $messageBox.val('');
   });
 
