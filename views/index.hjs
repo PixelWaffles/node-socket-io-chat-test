@@ -6,9 +6,9 @@
   </head>
   <body>
 
-    <span class='chat' id='chat_app'>
-      <form id='send_message'>
-        <input size='35' id='message_box' />
+    <span class='chat' id='chat-app'>
+      <form id='send-message'>
+        <input size='35' id='message-box' />
         <input type='submit' />
       </form>
     </span>
