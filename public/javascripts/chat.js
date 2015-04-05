@@ -17,5 +17,6 @@ $(document).ready(function($) {
 
   socket.on('new_message', function(_data) {
     $messageDisplay.append(_data + '<br/>');
+    $messageDisplay.scrollTop($messageDisplay[0].scrollHeight);
   });
 });
