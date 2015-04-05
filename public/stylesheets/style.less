@@ -7,9 +7,34 @@ a {
   color: #00B7FF;
 }
 
+.chat {
+  margin-left: auto;
+  margin-right: auto;
+  width: 55em;
+}
+
+.distinct-block {
+  display: block;
+  clear:both;
+}
+
 .chat-display {
   float: left;
   height: 30em;
   width: 50em;
   overflow-y: auto;
+}
+
+.message-sender {
+  display: table;
+  .element {
+    display: table-cell;
+  }
+  input:first-child {
+  width: 8em;
+  }
+  input:last-child {
+  width: 5em;
+  float: right;
+  }
 }

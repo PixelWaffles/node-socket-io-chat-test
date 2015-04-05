@@ -6,12 +6,12 @@
   </head>
   <body>
 
-    <span class='chat' id='chat-app'>
-      <div class='chat-display' id='message-display'></div>
-      <form id='send-message'>
-        <input size='16' id='username-box' placeholder='username' />
-        <input size='35' id='message-box' placeholder='message' />
-        <input type='submit' />
+    <span class='distinct-block chat' id='chat-app'>
+      <div class='distinct-block chat-display' id='message-display'></div>
+      <form class='distinct-block message-sender' id='send-message'>
+        <input class='element' size='16' maxLength='16' id='username-box' placeholder='username' />
+        <input class='element' size='64' maxLength= '128' id='message-box' placeholder='message' />
+        <input class='element' type='submit' />
       </form>
     </span>
 
