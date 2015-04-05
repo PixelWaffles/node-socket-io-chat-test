@@ -16,7 +16,12 @@ $(document).ready(function($) {
   });
 
   socket.on('new_message', function(_data) {
+    var isAtBottom = $messageDisplay[0].scrollHeight - $messageDisplay.scrollTop() == $messageDisplay.height();
+    var hasVerticalScroll = $messageDisplay[0].scrollHeight > $messageDisplay.height();
+
     $messageDisplay.append(_data + '<br/>');
-    $messageDisplay.scrollTop($messageDisplay[0].scrollHeight);
+    if(isAtBottom || !hasVerticalScroll) {
+      $messageDisplay.scrollTop($messageDisplay[0].scrollHeight);
+    }
   });
 });
