@@ -13,6 +13,10 @@ io.on('connection', function(_socket) {
     var disconnectTime = new Date().toJSON();
     console.log('['+ disconnectTime + ']' + 'Disconnection of id ' + _socket.id + ' from address ' + remoteAddress + ':' + remotePort + '.');
   });
+
+    _socket.on('send_message', function(_data) {
+      io.sockets.emit('new_message', _data);
+  });
 });
 
 module.exports = io;
