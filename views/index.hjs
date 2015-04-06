@@ -5,9 +5,19 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>{{ title }}</h1>
-    <p>Welcome to {{ title }}</p>
+
+    <span class='distinct-block chat' id='chat-app'>
+      <div class='distinct-block chat-display' id='message-display'></div>
+      <form class='distinct-block message-sender' id='send-message'>
+        <input class='element' size='16' maxLength='16' id='username-box' placeholder='username' />
+        <input class='element' size='64' maxLength= '128' id='message-box' placeholder='message' />
+        <input class='element' type='submit' />
+      </form>
+    </span>
+
+    <script src='http://code.jquery.com/jquery-latest.min.js'></script> 
     <script src='/socket.io/socket.io.js'></script>
+    <script src='/javascripts/chat.js'></script>
     <script>
       var socket = io();
     </script>
